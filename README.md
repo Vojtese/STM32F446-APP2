@@ -1,23 +1,22 @@
-# STM32F446-APP2
+# STM32F446 Application Slot 2 (APP2)
 
-This repository contains the secondary (fallback) application slot for the STM32F446 dual-slot bootloader system. It is designed to work alongside the [STM32F446 Bootloader](https://github.com/Vojtese/STM32F446-Bootloader) and [STM32F446-APP1](https://github.com/Vojtese/STM32F446-APP1) to ensure firmware redundancy and reliability.
+This repository contains the fallback application firmware for the STM32F446 signal acquisition unit. It ensures system reliability in case the primary application fails CRC or is missing.
 
 ## 🚀 Features
 
-- Application logic for Slot B
-- Compatible with bootloader jump logic and SCB->VTOR relocation
-- CRC integrity verification support
-- UART communication interface
-- STM32CubeIDE project structure
+- Identical structure to APP1
+- Sensor acquisition and RS485 communication
+- Compatible with bootloader fallback logic
+- CMSIS LL drivers for low-level control
 
 ## 📁 Project Structure
 
-- `Core/`: Application source files
+- `Core/`: Application logic
 - `Drivers/`: STM32 LL drivers
-- `.ioc`: STM32CubeMX configuration file
-- `STM32F446RETX_FLASH.ld`: Linker script aligned with bootloader memory map
+- `.ioc`: STM32CubeMX configuration
+- `STM32F446RETX_FLASH.ld`: Linker script for App2 memory region
 
-## 🔗 Related Repositories
+## 🔗 Related Projects
 
 - [STM32F446-Bootloader](https://github.com/Vojtese/STM32F446-Bootloader)
 - [STM32F446-APP1](https://github.com/Vojtese/STM32F446-APP1)
