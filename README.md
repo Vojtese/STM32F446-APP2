@@ -46,7 +46,7 @@ Like APP1, this firmware also supports in-application programming (IAP), allowin
 
 This version supports in-application programming. The application can receive firmware packets via UART or RS485, validate them, and flash a new application image without rebooting into the bootloader.
 
-![APP IAP Flow](docs/img/SWdesignv1.png)
+![APP IAP Flow](docs/img/SWdesignv1.svg)
 
 ---
 
