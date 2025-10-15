@@ -1,13 +1,20 @@
 # STM32F446 Application Slot 2 (APP2)
 
-This repository contains the fallback application firmware for the STM32F446 signal acquisition unit. It ensures system reliability in case the primary application fails CRC or is missing.
+This repository contains the fallback application firmware for the STM32F446 signal acquisition unit. It is used when the primary application (APP1) fails CRC validation or is missing, ensuring system reliability in field deployments.
 
 ## 🚀 Features
 
-- Identical structure to APP1
-- Sensor acquisition and RS485 communication
-- Compatible with bootloader fallback logic
-- CMSIS LL drivers for low-level control
+- Identical sensor acquisition and communication logic as APP1
+- Fully compatible with bootloader fallback mechanism
+- Memory-mapped to secondary application region
+- CRC validation and watchdog support
+- Modular structure for easy feature extension
+
+## 🧠 CMSIS LL Driver Usage
+
+Same as APP1, including:
+- ADC, UART, DMA, GPIO
+- Flash read access for CRC verification
 
 ## 📁 Project Structure
 
